@@ -104,7 +104,7 @@ function emitAfter() {
         {{ n }}
       </silence-button>
     </app-link>
-    <silence-button class="silence-patination-item active">
+    <silence-button class="silence-patination-item active" aria-current="page" disabled>
       {{ pageNum }}
     </silence-button>
     <app-link v-for="n in displayRightButtons" :key="n" :to="link?.(n) ?? '#'" @click="emitAfter">
@@ -138,8 +138,17 @@ function emitAfter() {
   justify-content: end;
 }
 
+.silence-patination-item {
+  cursor: pointer;
+}
+
 .silence-patination-item.active {
-  border: none;
-  color: var(--text-color) !important;
+  border-color: transparent;
+  color: var(--theme-color) !important;
+  cursor: default;
+}
+
+button.silence-patination-item.active:hover {
+  border-color: transparent;
 }
 </style>

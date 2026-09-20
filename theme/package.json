@@ -23,9 +23,10 @@
   "types": "types/index.d.ts",
   "dependencies": {
     "@iconify-json/material-symbols-light": "^1.2.39",
+    "@vueuse/core": "^14.4.0",
     "radash": "^12.1.1"
   },
   "devDependencies": {
-    "valaxy": "^0.28.11"
+    "valaxy": "1.0.0-rc.9"
   }
 }

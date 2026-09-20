@@ -11,7 +11,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "valaxy": "^0.28.11",
+    "valaxy": "1.0.0-rc.9",
     "valaxy-theme-silence": "workspace:*"
   }
 }

@@ -16,6 +16,11 @@ export default defineSiteConfig({
   frontmatter: {
     toc: false,
   },
+  excerpt: {
+    type: 'text',
+    auto: true,
+    length: 200,
+  },
   fuse: {
     dataPath: 'valaxy-fuse-list.json',
     /**

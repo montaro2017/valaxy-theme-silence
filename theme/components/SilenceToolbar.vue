@@ -5,7 +5,7 @@ import { useOutline } from 'valaxy'
 import { computed, ref, useTemplateRef, watch } from 'vue'
 import { useThemeConfig } from '../composables'
 import { useSilenceAppStore } from '../store/app'
-import { scrollToTop } from '../utils/theme'
+import { smoothScrollToTop } from '../utils/theme'
 
 const themeConfig = useThemeConfig()
 
@@ -65,7 +65,7 @@ const hasToc = computed(() => headers.value.length > 0)
       <div v-if="!isDark" class="i-material-symbols-light-dark-mode-outline" />
       <div v-else class="i-material-symbols-light-light-mode-outline" />
     </div>
-    <div class="silence-toolbar-btn-top silence-toolbar-btn" @click="scrollToTop">
+    <div class="silence-toolbar-btn-top silence-toolbar-btn" @click="smoothScrollToTop">
       <div class="i-material-symbols-light-keyboard-arrow-up" />
     </div>
     <div v-if="hasToc" class="silence-toolbar-toc silence-toolbar-btn" @click="toggleToc">
