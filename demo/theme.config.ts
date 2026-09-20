@@ -69,4 +69,11 @@ export default {
       serialNumber: true,
     },
   },
+  giscus: {
+    enable: true,
+    repo: 'Montaro2017/valaxy-theme-silence',
+    repoId: 'R_kgDOP2aNwQ',
+    category: 'Comments',
+    categoryId: 'DIC_kwDOP2aNwc4DF-2i',
+  },
 } as ThemeConfig

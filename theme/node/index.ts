@@ -63,6 +63,20 @@ export const defaultThemeConfig: ThemeConfig = {
   post: {
     dateFormat: 'YYYY-MM-DD',
   },
+  giscus: {
+    enable: false,
+    repo: '',
+    repoId: '',
+    category: 'Announcements',
+    categoryId: '',
+    mapping: 'pathname',
+    strict: false,
+    reactionsEnabled: true,
+    emitMetadata: false,
+    inputPosition: 'top',
+    lang: 'zh-CN',
+    loading: 'lazy',
+  },
 }
 
 // write a vite plugin

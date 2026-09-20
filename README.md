@@ -33,6 +33,41 @@ pnpm dev
 pnpm demo
 ```
 
+### Giscus comments
+
+Silence can render comments backed by GitHub Discussions without a separate
+comment server. Enable Discussions for a public repository, install the
+[giscus GitHub App](https://github.com/apps/giscus), and generate the repository
+and category IDs at [giscus.app](https://giscus.app/zh-CN).
+
+Enable comments in `site.config.ts`:
+
+```ts
+export default defineSiteConfig({
+  comment: {
+    enable: true,
+  },
+})
+```
+
+Then configure giscus in `theme.config.ts`:
+
+```ts
+export default {
+  giscus: {
+    enable: true,
+    repo: 'owner/repository',
+    repoId: 'R_...',
+    category: 'Announcements',
+    categoryId: 'DIC_...',
+  },
+} as ThemeConfig
+```
+
+The default page mapping is `pathname`. Giscus follows the theme's light/dark
+mode automatically. Set `comment: false` in a page's frontmatter to disable
+comments for that page.
+
 ### Build
 
 ```bash

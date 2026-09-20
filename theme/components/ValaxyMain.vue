@@ -19,8 +19,10 @@ const defaultToc = computed(() => {
 })
 
 const tocSerialNumber = computed(() => {
-  return themeConfig.value.post.toc?.serialNumber ?? true
+  return themeConfig.value.post?.toc?.serialNumber ?? true
 })
+
+const giscusEnabled = computed(() => themeConfig.value.giscus?.enable ?? false)
 </script>
 
 <template>
@@ -38,7 +40,10 @@ const tocSerialNumber = computed(() => {
     <silence-sponsor v-if="sponsor.enable" />
     <silence-post-nav />
     <silence-post-desc :frontmatter="frontmatter" />
-    <slot v-if="siteConfig.comment.enable && frontmatter.comment !== false" name="comment" />
+    <div v-if="siteConfig.comment.enable && frontmatter.comment !== false" class="comment">
+      <SilenceGiscus v-if="giscusEnabled" />
+      <slot v-else name="comment" />
+    </div>
     <silence-post-toc :default-toc="defaultToc" :serial-number="tocSerialNumber" />
   </main>
 </template>

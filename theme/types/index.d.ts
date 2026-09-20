@@ -50,6 +50,25 @@ export interface ThemeConfig {
     dateFormat?: string
   }>
 
+  /**
+   * GitHub Discussions powered comments.
+   * Generate repository and category IDs at https://giscus.app/zh-CN.
+   */
+  giscus?: Partial<{
+    enable: boolean
+    repo: string
+    repoId: string
+    category: string
+    categoryId: string
+    mapping: 'pathname' | 'url' | 'title' | 'og:title'
+    strict: boolean
+    reactionsEnabled: boolean
+    emitMetadata: boolean
+    inputPosition: 'top' | 'bottom'
+    lang: string
+    loading: 'lazy' | 'eager'
+  }>
+
 }
 
 export interface NavItem {
