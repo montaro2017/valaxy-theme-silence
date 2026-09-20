@@ -8,6 +8,9 @@ import themeConfig from './theme.config'
  */
 export default defineConfig<ThemeConfig>({
   theme: 'silence',
+  vite: {
+    base: '/valaxy-theme-silence/',
+  },
   fuse: {
     extendKeys: ['date'],
   },

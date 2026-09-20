@@ -48,7 +48,7 @@ export default {
     ],
   },
   sidebar: {
-    avatar: '/assets/avatar.jpg',
+    avatar: '/valaxy-theme-silence/assets/avatar.jpg',
     intro: '你所热爱的，就是你的生活',
     tagLimit: 0,
     categoryLimit: 0,

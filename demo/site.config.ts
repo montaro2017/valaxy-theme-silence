@@ -3,7 +3,7 @@ import { defineSiteConfig } from 'valaxy'
 export default defineSiteConfig({
   lang: 'zh-CN',
   title: '碱式碳酸铜\'s Blog',
-  url: 'https://blog.montaro.cn',
+  url: 'https://montaro2017.github.io/valaxy-theme-silence/',
   author: {
     avatar: 'https://www.yunyoujun.cn/images/avatar.jpg',
     name: '碱式碳酸铜',
@@ -55,12 +55,12 @@ export default defineSiteConfig({
       {
         name: '支付宝',
         icon: 'i-ant-design-alipay-outlined',
-        url: '/alipay.jpg',
+        url: '/valaxy-theme-silence/alipay.jpg',
       },
       {
         name: '微信',
         icon: 'i-ant-design-wechat-outlined',
-        url: '/wechat.png',
+        url: '/valaxy-theme-silence/wechat.png',
       },
     ],
   },
