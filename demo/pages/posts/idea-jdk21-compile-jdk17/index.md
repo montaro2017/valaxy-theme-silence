@@ -2,6 +2,7 @@
 layout: post
 title: 解决IDEA中使用JDK 21会编译为JDK 17的问题
 date: 2025-10-09 14:25:47
+top: true
 ---
 
 ## 背景

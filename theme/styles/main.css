@@ -21,7 +21,7 @@
 
 a,
 a.va-link {
-  color: var(--text-color);
+  color: var(--text-color) !important;
 }
 
 a:hover {
