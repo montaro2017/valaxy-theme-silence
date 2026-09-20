@@ -15,8 +15,11 @@ const emit = defineEmits(['after'])
 // 最多显示按钮数量 包含'...'和首页尾页页码 1...3 4 5...9
 const maxButtonCount = 7
 
-const maxPageNum = computed(() => Math.ceil(props.total / props.pageSize))
-const pageNum = computed(() => Math.min(Math.max(props.pageNum, 1), maxPageNum.value))
+const maxPageNum = computed(() => Math.max(1, Math.ceil(props.total / props.pageSize)))
+const pageNum = computed(() => {
+  const value = Number.isFinite(props.pageNum) ? Math.trunc(props.pageNum) : 1
+  return Math.min(Math.max(value, 1), maxPageNum.value)
+})
 
 // 除去首页和尾页的页码按钮，中间的所有按钮，包含当前页
 const buttons = computed(() => {
@@ -85,7 +88,7 @@ function emitAfter() {
 </script>
 
 <template>
-  <div class="silence-pagination">
+  <div v-if="total > 0" class="silence-pagination">
     <app-link v-if="prev" :to="link?.(prev ?? 1) ?? '#'" @click="emitAfter">
       <silence-button class="silence-patination-item">
         上一页

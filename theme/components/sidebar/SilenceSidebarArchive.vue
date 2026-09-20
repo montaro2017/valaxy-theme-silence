@@ -5,7 +5,7 @@ import { useArchives } from '../../utils/archive'
 
 const themeConfig = useThemeConfig()
 
-const archiveLimit = computed(() => themeConfig.value.sidebar.archiveLimit ?? 0)
+const archiveLimit = computed(() => themeConfig.value.sidebar?.archiveLimit ?? 0)
 const archives = useArchives()
 
 const archiveToShow = computed(() => {

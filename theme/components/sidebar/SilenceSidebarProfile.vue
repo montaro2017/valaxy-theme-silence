@@ -8,9 +8,9 @@ import { useAllPosts } from '../../utils/theme'
 const themeConfig = useThemeConfig()
 const siteConfig = useSiteConfig()
 
-const avatar = computed(() => themeConfig.value.sidebar.avatar ?? siteConfig.value.author.avatar)
-const author = computed(() => themeConfig.value.sidebar.author ?? siteConfig.value.author.name)
-const intro = computed(() => themeConfig.value.sidebar.intro ?? siteConfig.value.author.intro)
+const avatar = computed(() => themeConfig.value.sidebar?.avatar ?? siteConfig.value.author.avatar)
+const author = computed(() => themeConfig.value.sidebar?.author ?? siteConfig.value.author.name)
+const intro = computed(() => themeConfig.value.sidebar?.intro ?? siteConfig.value.author.intro)
 
 const posts = useAllPosts()
 const postCount = computed(() => posts.value.length)

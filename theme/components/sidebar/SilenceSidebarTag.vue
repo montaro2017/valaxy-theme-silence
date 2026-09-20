@@ -5,7 +5,7 @@ import { useThemeConfig } from '../../composables'
 
 const themeConfig = useThemeConfig()
 
-const tagLimit = computed(() => themeConfig.value.sidebar.tagLimit ?? 0)
+const tagLimit = computed(() => themeConfig.value.sidebar?.tagLimit ?? 0)
 const tags = useTags()
 
 const tagsToShow = computed(() => {

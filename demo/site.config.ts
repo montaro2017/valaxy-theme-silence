@@ -11,7 +11,7 @@ export default defineSiteConfig({
   description: '碱式碳酸铜\'s Blog',
   search: {
     enable: true,
-    type: 'fuse',
+    provider: 'fuse',
   },
   frontmatter: {
     toc: false,

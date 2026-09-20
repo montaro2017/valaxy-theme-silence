@@ -6,7 +6,7 @@ import { useThemeConfig } from '../../composables'
 const categories = computed(() => useCategories().value.children)
 
 const themeConfig = useThemeConfig()
-const categoryLimit = computed(() => themeConfig.value.sidebar.categoryLimit ?? 0)
+const categoryLimit = computed(() => themeConfig.value.sidebar?.categoryLimit ?? 0)
 
 const categoriesToShow = computed(() => {
   const filteredCategories = Array.from(categories.value).filter(([name, _]) => name !== 'Uncategorized')

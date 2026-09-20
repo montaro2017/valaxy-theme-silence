@@ -11,14 +11,14 @@ defineOptions({
 })
 const route = useRoute()
 const keyword = computed(() => getFirstQuery(route, 'q')?.value ?? '')
-const { results, fetchFuseListData } = useFuseSearch(keyword.value!)
+const { results, fetchFuseListData } = useFuseSearch(keyword)
 
 onMounted(() => {
   fetchFuseListData()
 })
 
 const title = computed(() => `${keyword.value} 的搜索结果（共${results.value?.length ?? 0}条）`)
-setTitle(`${keyword.value} - 搜索结果`)
+setTitle(computed(() => `${keyword.value} - 搜索结果`))
 
 const routePage = getFirstQuery(route, 'page')
 const pageNum = computed(() => Number(routePage.value ?? 1))
