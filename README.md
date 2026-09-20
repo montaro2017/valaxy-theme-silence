@@ -46,7 +46,18 @@ import type { ThemeConfig } from 'valaxy-theme-silence'
 
 export default {
   // 工具栏中可切换的主题色，第一个颜色为默认值
-  colors: ['#ff5722', '#0078e7', '#42b983'],
+  colors: [
+    '#ff5722',
+    '#0078E7',
+    '#fa7298',
+    '#42b983',
+    '#607d8b',
+    '#5e72e4',
+    '#ff9700',
+    '#009688',
+    '#673bb7',
+    '#906f61',
+  ],
 
   // 是否使用圆形扩散动画切换明暗模式
   toggleDarkWithCircleTransition: true,
